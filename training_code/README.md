@@ -1,6 +1,10 @@
 # **HDR-CNN training code**
 Here you can find the resources for performing training of the HDR reconstruction CNN. There is one training script, and a pre-processing/data augmentation application. This application acts as a virtual camera, capturing a set of crops from an HDR scene, and simulating different camera parameters. The application is called from within the training script.
 
+VGG16 model used. The 16 layers: ![image](https://user-images.githubusercontent.com/13279668/114224967-7270ff80-997a-11eb-9dc9-0f01b4f2c98b.png)
+
+Double and triple convolution + ReLU each followed by pooling and in the end three fully connected layers.
+
 ## Setup
 While the prediction code in the parent folder is straightforward and with minimal dependencies, pretty much running out-of-the-box, the training pipeline may require more preparation in terms of data, dependencies and parameters. Furthermore, there is not proper exception handling in all places. The code has only been tested under linux (Fedora 25), so for other platforms some tweaking is probably required.
 
